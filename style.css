@@ -1,0 +1,175 @@
+@font-face {
+  font-family: NeueHaasDisplay-Mediu;
+  src: url(assets/NeueHaasDisplay-Mediu.ttf);
+}
+
+@font-face {
+  font-family: NeueHaasDisplay-Roman;
+  src: url(assets/NeueHaasDisplay-Roman.ttf);
+}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body{
+  height: 100%;
+  width: 100%;
+  font-family: NeueHaasDisplay-Roman;
+  overflow-x:hidden ;
+}
+
+#main{
+  /* height: 100%;
+  width: 100%; */
+}
+
+#page1{
+  min-height: 100vh;
+  width: 100%;
+  background-color: #efeae3;
+  position: relative;
+  padding: 0vw 3vw;
+}
+
+#nav{
+  padding: 2vw 0vw;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#nav-part2{
+  display: flex;
+  align-items: center;
+  gap: 1vw;
+}
+
+#nav-part2 h4{
+  padding: 10px 20px;
+  border: 1px solid #8a8a8a89;
+  border-radius: 50px;
+  position: relative;
+  overflow: hidden;
+}
+
+#nav-part2 h4 a{
+  color: black;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  z-index: 9;
+  position: relative;
+  transition: all ease 0.3s;
+}
+
+#nav-part2 h4:hover a{
+  color: white;
+}
+
+#nav-part2 h4::after{
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  bottom: -100%;
+  border-radius: 50%;
+  background-color: black;
+  transition: all ease 0.3s;
+}
+
+#nav-part2 h4:hover::after{
+  bottom: 0%;
+  border-radius: 0;
+}
+
+#center{
+  height: 70vh;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content:space-between;
+  border-bottom: 1px solid #8a8a8a89;
+  padding-bottom: 3vw;
+}
+
+#left h3{
+  width: 30vw;
+  font-size: 1.6vw;
+  line-height: 1.6vw;
+}
+
+#right h1{
+  font-size: 10vw;
+  line-height: 8vw;
+  text-align: right;
+  font-family: NeueHaasDisplay-Mediu;
+}
+
+#page1 video{
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 5vw;
+  position: relative;
+}
+
+#hero-shape{
+  position: absolute;
+  width: 46vw;
+  height: 36vw;
+  right: 0;
+  top: 70vh;
+  filter: blur(20px);
+}
+
+#hero-1{
+  height: 100%;
+  width: 100%;
+  background-color: #FE330A;
+  border-top-left-radius: 50%;
+  border-bottom-left-radius: 50% ;
+  filter: blur(20px);
+  position: absolute;
+}
+
+#hero-2{
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#FE330A,#fe350a);
+  border-radius: 50%;  
+  filter: blur(25px);
+  position: absolute;
+  animation: anime2 5s linear infinite alternate;
+}
+
+#hero-3{
+  height: 30vw;
+  width: 30vw;
+  background: linear-gradient(#FE330A,#fe350a);
+  border-radius: 50%;
+  filter: blur(25px);
+  position: absolute;
+  animation: anime1 5s linear infinite alternate;
+}
+
+@keyframes anime1 {
+  from{
+    transform: translate(55%,-3%);
+  }
+  to{
+    transform: translate(10%,10%);
+  }
+}
+
+@keyframes anime2 {
+  from{
+    transform: translate(5%,-5%);
+  }
+  to{
+    transform: translate(-20%,30%);
+  }
+}
